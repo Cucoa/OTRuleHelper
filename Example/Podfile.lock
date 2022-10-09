@@ -1,0 +1,27 @@
+PODS:
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - OTRuleHelper (0.1.0)
+
+DEPENDENCIES:
+  - FBSnapshotTestCase
+  - OTRuleHelper (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - FBSnapshotTestCase
+
+EXTERNAL SOURCES:
+  OTRuleHelper:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  OTRuleHelper: 55689954dbac694c362a05127719add5032f6d96
+
+PODFILE CHECKSUM: 08cf1e35a2fcf991fe8ae5b18599775f8e6b6a50
+
+COCOAPODS: 1.11.3
