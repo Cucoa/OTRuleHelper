@@ -299,16 +299,21 @@ static NSDateFormatter *otrule_df;
                 NSInteger size_fix = [element[OTRuleKeyItemSizeFix] integerValue];
                 size = size*size_fix;
             }
+            id value = nil;
+            if ([item_obj isKindOfClass:[NSDictionary class]]) {
+                value = item_obj[key];
+            }else{
+                value = item_obj;
+            }
             NSArray *sub_rules = element[OTRuleKeyItemSubItems];
             
-            [item_data appendData:[NSMutableData dataWithLength:size]];
-            NSData *tmp_data = [OTRuleHelper dataConvertFromObject:item_obj
+            NSData *tmp_data = [OTRuleHelper dataConvertFromObject:value
                                                                    key:key
                                                                   type:type
                                                                   size:size
                                                                 endian:isLittle
                                                                  rules:sub_rules];
-            [item_data replaceBytesInRange:(NSRange){0,tmp_data.length} withBytes:tmp_data.bytes length:tmp_data.length];
+            [item_data appendData:tmp_data];
         }
         [data appendData:item_data];
     }
@@ -428,7 +433,9 @@ static NSDateFormatter *otrule_df;
     if (data.length > size) {
         data = [data subdataWithRange:(NSRange){0,size}];
     }
-    return data;
+    NSMutableData *mData = [NSMutableData dataWithLength:size];
+    [mData replaceBytesInRange:(NSRange){0,data.length} withBytes:data.bytes length:data.length];
+    return mData;
 }
 
 #pragma mark -

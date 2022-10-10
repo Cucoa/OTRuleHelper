@@ -44,23 +44,23 @@ extern NSString const *OTRuleKeyItemSubItems;//OTRuleValueTypeArray、OTRuleValu
 @interface OTRuleHelper : NSObject
 
 #pragma mark -
-///将data通过制定规则解析成字典(默认大端)
+///将data通过指定规则解析成字典(默认大端)
 + (NSMutableDictionary *)dictionaryForData:(NSData *)data withRules:(NSArray *)rules;
-///将data通过制定规则解析成字典
+///将data通过指定规则解析成字典
 + (NSMutableDictionary *)dictionaryForData:(NSData *)data withRules:(NSArray *)rules littleEndian:(BOOL)endian;
-///将data通过制定规则解析成数组（默认大端）
+///将data通过指定规则解析成数组（默认大端）
 + (NSMutableArray *)arrayForData:(NSData *)data withRules:(NSArray *)rules;
-///将data通过制定规则解析成数组
+///将data通过指定规则解析成数组
 + (NSMutableArray *)arrayForData:(NSData *)data withRules:(NSArray *)rules littleEndian:(BOOL)endian;
 
 #pragma mark -
-///将字典通过制定规则打包成data（默认大端）
+///将字典通过指定规则打包成data（默认大端）
 + (NSMutableData *)dataForDictionary:(NSDictionary *)dictionary withRules:(NSArray *)rules;
-///将字典通过制定规则打包成data
+///将字典通过指定规则打包成data
 + (NSMutableData *)dataForDictionary:(NSDictionary *)dictionary withRules:(NSArray *)rules littleEndian:(BOOL)endian;
-///将数组通过制定规则打包成data（默认大端）
+///将数组通过指定规则打包成data（默认大端）
 + (NSMutableData *)dataForArray:(NSArray *)array withRules:(NSArray *)rules;
-///将数组通过制定规则打包成data
+///将数组通过指定规则打包成data
 + (NSMutableData *)dataForArray:(NSArray *)array withRules:(NSArray *)rules littleEndian:(BOOL)endian;
 
 #pragma mark -
