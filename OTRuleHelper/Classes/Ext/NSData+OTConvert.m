@@ -7,6 +7,7 @@
 
 #import "NSData+OTConvert.h"
 
+
 @implementation NSData (OT_Ecg)
 
 - (NSArray *)ot_convertToEcgSamplesUseBigEndian:(BOOL)bigEndian bytePerDot:(UInt16)bytePerDot ad:(int)ad{
@@ -16,17 +17,28 @@
         for (int n = 1; n <= bytePerDot; n++) {
             Byte byte = 0;
             [self getBytes:&byte range:(NSRange){i+n-1,1}];
-            vlu += bigEndian ? (byte << (bytePerDot - n)*8) : (byte << ((n-1)*8));
+            vlu += ( byte << (bigEndian ? (bytePerDot - n)*8 : (n-1)*8) );
         }
         [samples addObject:@(floor(100.0*vlu/ad)/100)];
     }
     return samples;
 }
 
-- (NSArray *)ot_convertToEcgGroupsUseBigEndian:(BOOL)bigEndian
-                                 bytePerDot:(UInt16)bytePerDot
-                                      leads:(int)leads
-                                         ad:(int)ad{
++ (NSData *)ot_convertFromEcgSamples:(NSArray *)samples bigEdian:(BOOL)bigEndian bytePerDot:(UInt16)bytePerDot ad:(int)ad{
+    NSMutableData *data = [NSMutableData data];
+    for (id element in samples) {
+        uint64_t vlu = [element doubleValue]*ad;
+        NSMutableData *tmp = [NSMutableData data];
+        for (int n = 1; n <= bytePerDot; n++) {
+            uint16_t bitoff = bigEndian ? (bytePerDot - n)*8 : (n-1)*8;
+            [tmp appendBytes:(Byte[]){(vlu>>bitoff)&0xff} length:1];
+        }
+        [data appendData:tmp];
+    }
+    return data;
+}
+
+- (NSArray *)ot_convertToEcgGroupsUseBigEndian:(BOOL)bigEndian bytePerDot:(UInt16)bytePerDot leads:(int)leads ad:(int)ad{
     NSMutableArray<NSMutableArray *> *groups = [@[] mutableCopy];
     
     for (int i = 0; i < leads; i++) {
@@ -38,11 +50,36 @@
         for (int n = 1; n <= bytePerDot; n++) {
             Byte byte = 0;
             [self getBytes:&byte range:(NSRange){i+n-1,1}];
-            vlu += bigEndian ? (byte << (bytePerDot - n)*8) : (byte << ((n-1)*8));
+            vlu += ( byte << (bigEndian ? (bytePerDot - n)*8 : (n-1)*8) );
         }
         [groups[(i/bytePerDot)%leads] addObject:@(floor(100.0*vlu/ad)/100)];
     }
     return groups;
+}
+
++ (NSData *)ot_convertFromEcgGroups:(NSArray *)groups bigEdian:(BOOL)bigEndian bytePerDot:(UInt16)bytePerDot leads:(int)leads ad:(int)ad{
+       
+    NSMutableData *data = [[NSMutableData alloc] init];
+    NSInteger count = 0;
+    if ([[groups firstObject] isKindOfClass:[NSArray class]]) {
+        count = [[groups firstObject] count];
+    }
+    for (int i = 0; i < count; i++) {
+        for (int j = 0; j < leads; j++) {
+            uint64_t vlu = 0;
+            if (groups.count > j && [groups[j] isKindOfClass:[NSArray class]] && [groups[j] count] > i) {
+                vlu = [groups[j][i] doubleValue]*ad;
+            }
+            NSMutableData *tmp = [NSMutableData data];
+            for (int n = 1; n <= bytePerDot; n++) {
+                uint16_t bitoff = bigEndian ? (bytePerDot - n)*8 : (n-1)*8;
+                [tmp appendBytes:(Byte[]){(vlu>>bitoff)&0xff} length:1];
+            }
+            [data appendData:tmp];
+        }
+    }
+    return data;
+    
 }
 
 - (NSArray *)ot_convertToEcgPointsUseBigEndian:(BOOL)bigEndian bytePerDot:(UInt16)bytePerDot leads:(int)leads ad:(int)ad hz:(int)hz offset:(uint32_t)offset{
@@ -168,6 +205,24 @@
 }
 
 #pragma mark -
++ (NSData *)ot_dataConvertFromJson:(id)object{
+    NSData *data = nil;
+    if([object isKindOfClass:[NSData class]]){
+        data = object;
+    }else if ([object isKindOfClass:[NSString class]]) {
+        data = [NSData ot_dataCovertFromStringUTF8:object];
+    }else if ([NSJSONSerialization isValidJSONObject:object]){
+        data = [NSJSONSerialization dataWithJSONObject:object options:NSJSONWritingFragmentsAllowed error:nil];
+    }
+    return data;
+}
+
++ (id)ot_jsonConvertFromData:(NSData *)data{
+    if (![data isKindOfClass:[NSData class]]) {
+        return nil;
+    }
+    return [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+}
 
 @end
 

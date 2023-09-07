@@ -130,5 +130,28 @@
     return [NSData dataWithBytes:(Byte[]){code&0xff} length:1];
 }
 
+///取模取反验证
+- (BOOL)ot_verifyUseModIV{
+    NSUInteger length = self.length;
+    
+    NSData *data = [NSData ot_dataUseModIVToData:[self subdataWithRange:(NSRange){0,length - 1}]];
+    UInt8 code = 0;
+    [data getBytes:&code length:1];
+    UInt8 lrc = 0;
+    [self getBytes:&lrc range:(NSRange){length - 1,1}];
+    
+    return lrc == code;
+}
+///取模取反计算
++ (NSData *)ot_dataUseModIVToData:(NSData *)data{
+    UInt8 code = 0;
+    for (int i = 0; i < data.length; i++) {
+        UInt8 vlu = 0;
+        [data getBytes:&vlu range:(NSRange){i,1}];
+        code = (code+vlu)%256;
+    }
+    code = 256 - code;
+    return [NSData dataWithBytes:(Byte[]){code&0xff} length:1];
+}
 @end
 

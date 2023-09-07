@@ -71,7 +71,7 @@
             OTRuleKeyItemSize : @(3),//元素等长，填写数组个数，
             OTRuleKeyItemType : @(OTRuleValueTypeArrayFix),
             OTRuleKeyItemSizeFix : @(10),
-            OTRuleKeyItemSubItems : @[
+            OTRuleKeyItemSubRules : @[
                 @{
                     OTRuleKeyItemName : @"name",
                     OTRuleKeyItemSize : @(8),
@@ -119,7 +119,7 @@
             OTRuleKeyItemName : @"list",
             OTRuleKeyItemSize : @"list_bytes",
             OTRuleKeyItemType : @(OTRuleValueTypeArray),
-            OTRuleKeyItemSubItems : @[
+            OTRuleKeyItemSubRules : @[
                 @{
                     OTRuleKeyItemName : @"name_bytes",
                     OTRuleKeyItemSize : @(2),

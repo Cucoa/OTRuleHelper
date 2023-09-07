@@ -18,6 +18,11 @@ NS_ASSUME_NONNULL_BEGIN
                                      bytePerDot:(UInt16)bytePerDot
                                              ad:(int)ad;
 
++ (NSData *)ot_convertFromEcgSamples:(NSArray *)samples
+                            bigEdian:(BOOL)bigEndian
+                          bytePerDot:(UInt16)bytePerDot
+                                  ad:(int)ad;
+
 /**
  将二进制数据转换为采样数组（按通道分组）
  */
@@ -25,6 +30,12 @@ NS_ASSUME_NONNULL_BEGIN
                                  bytePerDot:(UInt16)bytePerDot
                                          leads:(int)leads
                                             ad:(int)ad;
+
++ (NSData *)ot_convertFromEcgGroups:(NSArray *)groups
+                           bigEdian:(BOOL)bigEndian
+                         bytePerDot:(UInt16)bytePerDot
+                              leads:(int)leads
+                                 ad:(int)ad;
 
 /**
  将二进制数据转换为心电坐标（s,mv）
@@ -35,6 +46,8 @@ NS_ASSUME_NONNULL_BEGIN
                                             ad:(int)ad
                                             hz:(int)hz
                                         offset:(uint32_t)offset;
+
+
 
 @end
 
@@ -88,6 +101,9 @@ NS_ASSUME_NONNULL_BEGIN
  @return string
  */
 + (NSString *)ot_stringHexCovertFromData:(NSData *)data;
+
++ (NSData *)ot_dataConvertFromJson:(id)object;
++ (id)ot_jsonConvertFromData:(NSData *)data;
 
 @end
 

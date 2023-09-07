@@ -10,11 +10,11 @@
 #import "NSData+OTConvert.h"
 
 NSString const *OTRuleKeyItemName      = @"v_key";//字符串
-NSString const *OTRuleKeyItemSize      = @"v_size";//整型
+NSString const *OTRuleKeyItemSize      = @"v_size";//整型/字符串
 NSString const *OTRuleKeyItemType      = @"v_type";//整型
 NSString const *OTRuleKeyItemSizeFix   = @"v_size_fix";//整型，在OTRuleValueTypeArrayFix类型使用,表示元素长度
-NSString const *OTRuleKeyItemEndian    = @"v_endian";//布尔型
-NSString const *OTRuleKeyItemSubItems  = @"v_sub_rules";//数组， OTRuleValueTypeArray数据为列表类型
+NSString const *OTRuleKeyItemEndian    = @"v_endian";//布尔型,NO-大端 YES-小端
+NSString const *OTRuleKeyItemSubRules  = @"v_sub_rules";//数组， OTRuleValueTypeArray数据为列表类型
 NSString const *OTRuleKeyItemBytesFlip = @"v_flip";//布尔型
 
 static NSDateFormatter *otrule_df;
@@ -26,7 +26,8 @@ static NSDateFormatter *otrule_df;
     NSMutableDictionary *response = [@{} mutableCopy];
     NSInteger offset = 0;
     for (NSDictionary *element in rules) {
-        if (offset>= data.length) break;
+        if (offset >= data.length) break;
+        
         id value = nil;
         NSString *key = element[OTRuleKeyItemName];
         OTRuleValueType type = [element[OTRuleKeyItemType] integerValue];
@@ -45,14 +46,17 @@ static NSDateFormatter *otrule_df;
             NSInteger size_fix = [element[OTRuleKeyItemSizeFix] integerValue];
             size = size*size_fix;
         }
-        NSArray *sub_rules = element[OTRuleKeyItemSubItems];
+        
+        if (offset + size > data.length) break;
+        
+        NSArray *sub_rules = element[OTRuleKeyItemSubRules];
         NSData *content = [data subdataWithRange:(NSRange){offset,size}];
         value = [OTRuleHelper objectConvertFromData:content
-                                                    key:key
-                                                   type:type
-                                                   size:size
-                                                 endian:isLittle
-                                                  rules:sub_rules];
+                                                key:key
+                                               type:type
+                                               size:size
+                                             endian:isLittle
+                                              rules:sub_rules];
         
         [response setObject:value?value:@"" forKey:key];
         offset += size;
@@ -89,7 +93,7 @@ static NSDateFormatter *otrule_df;
                 NSInteger size_fix = [element[OTRuleKeyItemSizeFix] integerValue];
                 size = size*size_fix;
             }
-            NSArray *sub_rules = element[OTRuleKeyItemSubItems];
+            NSArray *sub_rules = element[OTRuleKeyItemSubRules];
             NSData *content = [data subdataWithRange:(NSRange){offset,size}];
             value = [OTRuleHelper objectConvertFromData:content
                                                         key:key
@@ -230,6 +234,11 @@ static NSDateFormatter *otrule_df;
             value = [OTRuleHelper dictionaryForData:data withRules:rules];
         }
             break;
+        case OTRuleValueTypeJson:
+        {
+            value = [NSData ot_jsonConvertFromData:data];
+        }
+            break;
     }
     return value;
 }
@@ -257,7 +266,7 @@ static NSDateFormatter *otrule_df;
             size = size*size_fix;
         }
         id item_obj = dict[key];//
-        NSArray *sub_rules = element[OTRuleKeyItemSubItems];
+        NSArray *sub_rules = element[OTRuleKeyItemSubRules];
         
         NSMutableData *item_data = [NSMutableData dataWithLength:size];
         NSData *tmp_data = [OTRuleHelper dataConvertFromObject:item_obj
@@ -305,15 +314,16 @@ static NSDateFormatter *otrule_df;
             }else{
                 value = item_obj;
             }
-            NSArray *sub_rules = element[OTRuleKeyItemSubItems];
+            NSArray *sub_rules = element[OTRuleKeyItemSubRules];
             
+            [item_data appendData:[NSMutableData dataWithLength:size]];
             NSData *tmp_data = [OTRuleHelper dataConvertFromObject:value
                                                                    key:key
                                                                   type:type
                                                                   size:size
                                                                 endian:isLittle
                                                                  rules:sub_rules];
-            [item_data appendData:tmp_data];
+            [item_data replaceBytesInRange:(NSRange){item_data.length - size,tmp_data.length} withBytes:tmp_data.bytes length:tmp_data.length];
         }
         [data appendData:item_data];
     }
@@ -429,13 +439,16 @@ static NSDateFormatter *otrule_df;
             data = [OTRuleHelper dataForDictionary:object withRules:rules];
         }
             break;
+        case OTRuleValueTypeJson:
+        {
+            data = [NSData ot_dataConvertFromJson:object];
+        }
+            break;
     }
     if (data.length > size) {
         data = [data subdataWithRange:(NSRange){0,size}];
     }
-    NSMutableData *mData = [NSMutableData dataWithLength:size];
-    [mData replaceBytesInRange:(NSRange){0,data.length} withBytes:data.bytes length:data.length];
-    return mData;
+    return data;
 }
 
 #pragma mark -
@@ -448,7 +461,7 @@ static NSDateFormatter *otrule_df;
         if ([size intValue] > 0) {
             let += [size intValue];
         }else{
-            [var appendFormat:@"+n%@",@(cont)];
+            [var appendFormat:@"+N%@",@(cont)];
             cont+=1;
         }
     }
