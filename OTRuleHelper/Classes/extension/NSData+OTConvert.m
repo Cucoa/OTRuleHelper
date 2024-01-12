@@ -13,7 +13,7 @@
 - (NSArray *)ot_convertToEcgSamplesUseBigEndian:(BOOL)bigEndian bytePerDot:(UInt16)bytePerDot ad:(int)ad{
     NSMutableArray *samples = [@[] mutableCopy];
     for (int i = 0; i < self.length; i+=bytePerDot) {
-        uint64_t vlu = 0;
+        int64_t vlu = 0;
         for (int n = 1; n <= bytePerDot; n++) {
             Byte byte = 0;
             [self getBytes:&byte range:(NSRange){i+n-1,1}];
@@ -21,13 +21,14 @@
         }
         [samples addObject:@(floor(100.0*vlu/ad)/100)];
     }
+    
     return samples;
 }
 
 + (NSData *)ot_convertFromEcgSamples:(NSArray *)samples bigEdian:(BOOL)bigEndian bytePerDot:(UInt16)bytePerDot ad:(int)ad{
     NSMutableData *data = [NSMutableData data];
     for (id element in samples) {
-        uint64_t vlu = [element doubleValue]*ad;
+        int64_t vlu = [element doubleValue]*ad;
         NSMutableData *tmp = [NSMutableData data];
         for (int n = 1; n <= bytePerDot; n++) {
             uint16_t bitoff = bigEndian ? (bytePerDot - n)*8 : (n-1)*8;
@@ -46,7 +47,7 @@
     }
     
     for (int i = 0; i < self.length; i+=bytePerDot) {
-        uint64_t vlu = 0;
+        int64_t vlu = 0;
         for (int n = 1; n <= bytePerDot; n++) {
             Byte byte = 0;
             [self getBytes:&byte range:(NSRange){i+n-1,1}];
@@ -66,7 +67,7 @@
     }
     for (int i = 0; i < count; i++) {
         for (int j = 0; j < leads; j++) {
-            uint64_t vlu = 0;
+            int64_t vlu = 0;
             if (groups.count > j && [groups[j] isKindOfClass:[NSArray class]] && [groups[j] count] > i) {
                 vlu = [groups[j][i] doubleValue]*ad;
             }
@@ -101,11 +102,11 @@
 
 @implementation NSData (OT_String)
 
-+ (NSData *)ot_dataCovertFromStringUTF8:(NSString *)string{
++ (NSData *)ot_dataConvertFromStringUTF8:(NSString *)string{
     return [string dataUsingEncoding:NSUTF8StringEncoding];
 }
 
-+ (NSData *)ot_dataCovertFromStringUTF8:(NSString *)string length:(NSUInteger)length{
++ (NSData *)ot_dataConvertFromStringUTF8:(NSString *)string length:(NSUInteger)length{
     NSMutableData *data =  nil;
     
     NSInteger max = [string lengthOfBytesUsingEncoding:NSUTF8StringEncoding];
@@ -141,7 +142,14 @@
     return data;
 }
 
-+ (NSString *)ot_stringUTF8CovertFromData:(NSData *)data{
++ (NSString *)ot_stringUTF8ConvertFromData:(NSData *)data{
+    if (!data || data.length <= 0) {
+        return @"";
+    }
+    NSRange range = [data rangeOfData:[NSData dataWithBytes:"\x00" length:1] options:0 range:(NSRange){0,data.length}];
+    if (range.length!=0) {
+        data = [data subdataWithRange:(NSRange){0,range.location}];
+    }
     NSString *str = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
     if (!str) {
         str = [[NSString alloc]initWithData:data encoding:CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000)];
@@ -150,11 +158,11 @@
 }
 
 #pragma mark -
-+ (NSData *)ot_dataCovertFromStringHex:(NSString *)hexString{
-    return [NSData ot_dataCovertFromStringHex:hexString length:0];
++ (NSData *)ot_dataConvertFromStringHex:(NSString *)hexString{
+    return [NSData ot_dataConvertFromStringHex:hexString length:0];
 }
 
-+ (NSData *)ot_dataCovertFromStringHex:(NSString *)hexString length:(NSUInteger)length{
++ (NSData *)ot_dataConvertFromStringHex:(NSString *)hexString length:(NSUInteger)length{
     hexString = [hexString stringByReplacingOccurrencesOfString:@" " withString:@""];
     if (hexString.length%2 != 0) {
         NSLog(@"长度不符合十六进制格式");
@@ -191,7 +199,7 @@
     return data;
 }
 
-+ (NSString *)ot_stringHexCovertFromData:(NSData *)data{
++ (NSString *)ot_stringHexConvertFromData:(NSData *)data{
     if (!data) {
         return nil;
     }
@@ -205,12 +213,80 @@
 }
 
 #pragma mark -
++ (NSData *)ot_dataGB2312ConverFromUTF8Data:(NSData *)data{
+    NSStringEncoding GB2312Encoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
+    NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    return [str dataUsingEncoding:GB2312Encoding];
+}
+
++ (NSData *)ot_dataUTF8ConvertFromGB2312Data:(NSData *)data{
+    NSStringEncoding GB2312Encoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
+    NSString *str = [[NSString alloc] initWithData:data encoding:GB2312Encoding];
+    return [str dataUsingEncoding:NSUTF8StringEncoding];
+}
+
+#pragma mark -
++ (NSData *)ot_dataConvertFromStringGB2312:(NSString *)string{
+    NSStringEncoding GB2312Encoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
+    return [string dataUsingEncoding:GB2312Encoding];
+}
+
++ (NSData *)ot_dataConvertFromStringGB2312:(NSString *)string length:(NSUInteger)length{
+    NSStringEncoding GB2312Encoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
+    
+    NSMutableData *data =  nil;
+    NSInteger max = [string lengthOfBytesUsingEncoding:GB2312Encoding];
+    
+    if (max > length) {
+        //1、这种方式能保证转出字符串(当字符串比较多的时候 max比较大，所需要的时间相对第2种可能需要的更长)
+        data = [NSMutableData dataWithLength:length];
+        NSInteger offset = 0;
+        NSRange range;
+        for (int i = 0; i < string.length; i+=range.length) {
+            range = [string rangeOfComposedCharacterSequenceAtIndex:i];
+            NSString *c = [string substringWithRange:range];
+            NSData *cd = [c dataUsingEncoding:GB2312Encoding];
+            NSInteger len = cd.length;
+            if (offset+len > length) {
+                break;
+            }
+            [data replaceBytesInRange:(NSRange){offset,len} withBytes:cd.bytes];
+            offset += cd.length;
+            c  = nil;
+            cd = nil;
+        }
+        
+        //2、这种进行截取的时候可能导致 转出来的字符串为null
+        //NSData *tmp = [string dataUsingEncoding:NSUTF8StringEncoding];
+        //data = [[tmp subdataWithRange:(NSRange){0,ml}] mutableCopy];
+    }else if(max < length){
+        data = [NSMutableData dataWithLength:length];
+        [data replaceBytesInRange:(NSRange){0,max} withBytes:[string dataUsingEncoding:GB2312Encoding].bytes];
+    }else{
+        data = [NSMutableData dataWithData:[string dataUsingEncoding:GB2312Encoding]];
+    }
+    return data;
+}
+
++ (NSString *)ot_stringGB2312ConvertFromData:(NSData *)data{
+    if (!data || data.length <= 0) {
+        return @"";
+    }
+    NSRange range = [data rangeOfData:[NSData dataWithBytes:"\x00" length:1] options:0 range:(NSRange){0,data.length}];
+    if (range.length!=0) {
+        data = [data subdataWithRange:(NSRange){0,range.location}];
+    }
+    NSStringEncoding GB2312Encoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
+    NSString *str = [[NSString alloc] initWithData:data encoding:GB2312Encoding];
+    return str;
+}
+#pragma mark -
 + (NSData *)ot_dataConvertFromJson:(id)object{
     NSData *data = nil;
     if([object isKindOfClass:[NSData class]]){
         data = object;
     }else if ([object isKindOfClass:[NSString class]]) {
-        data = [NSData ot_dataCovertFromStringUTF8:object];
+        data = [NSData ot_dataConvertFromStringUTF8:object];
     }else if ([NSJSONSerialization isValidJSONObject:object]){
         data = [NSJSONSerialization dataWithJSONObject:object options:NSJSONWritingFragmentsAllowed error:nil];
     }
@@ -228,12 +304,12 @@
 
 @implementation NSData (OT_Int)
 
-+ (NSData *)ot_dataCovertFromUInt:(UInt64)a{
++ (NSData *)ot_dataConvertFromUInt:(UInt64)a{
     NSString *hexStr = [NSString stringWithFormat:@"%llx",a];
-    return [NSData ot_dataCovertFromStringHex:hexStr];
+    return [NSData ot_dataConvertFromStringHex:hexStr];
 }
 
-+ (NSData *)ot_dataCovertFromUInt:(UInt64)a length:(NSUInteger)length{
++ (NSData *)ot_dataConvertFromUInt:(UInt64)a length:(NSUInteger)length{
     Byte byte[length];
     for (NSInteger i = 0;i < MIN(4, length); i++) {
         byte[length-i-1] = (a >> (i*8)) & 0xff;
@@ -241,7 +317,7 @@
     return [NSData dataWithBytes:byte length:length];
 }
 
-+ (UInt64)ot_uint64CovertFromData:(NSData *)data{
++ (UInt64)ot_uint64ConvertFromData:(NSData *)data{
     if (data.length > 8) {
         NSLog(@"NSData数据过长,无法用任何整数类型表示");
         return 0;
@@ -268,7 +344,7 @@
     return _cvtDF;
 }
 
-+ (NSData *)ot_dataCovertAs7BytesFromTimeStamp:(NSInteger)timeStamp{
++ (NSData *)ot_dataConvertAs7BytesFromTimeStamp:(NSInteger)timeStamp{
     NSDateFormatter *df = [self ot_dateFormatter];
     [df setDateFormat:@"yyyyMMddHHmmss"];
     NSString *dateString = [df stringFromDate:[NSDate dateWithTimeIntervalSince1970:timeStamp]];
@@ -297,7 +373,7 @@
     return [[df dateFromString:dateString] timeIntervalSince1970];
 }
 
-+ (NSData *)ot_dataCovertAs6BytesFromTimeStamp:(NSInteger)timeStamp{
++ (NSData *)ot_dataConvertAs6BytesFromTimeStamp:(NSInteger)timeStamp{
     NSDateFormatter *df = [self ot_dateFormatter];
     [df setDateFormat:@"yyMMddHHmmss"];
     NSString *dateString = [df stringFromDate:[NSDate dateWithTimeIntervalSince1970:timeStamp]];

@@ -40,7 +40,7 @@
 }
 
 
-+ (NSData *)ot_dataWithLength:(NSUInteger)length useByte:(Byte)byte{
++ (NSData *)ot_fillByte:(Byte)byte toMaxLength:(NSUInteger)length{
     NSMutableData *data = [NSMutableData dataWithLength:length];
     if (byte != 0x00) {
         for (int i = 0; i < data.length; i++) {

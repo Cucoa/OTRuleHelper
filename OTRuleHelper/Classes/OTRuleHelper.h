@@ -21,23 +21,24 @@ typedef NS_ENUM(NSInteger,OTRuleValueType){
     OTRuleValueTypeStringUTF8 = 10,
     OTRuleValueTypeStringHex  = 11,
     OTRuleValueTypeStringHexUseEndian = 12,
+    OTRuleValueTypeStirngGB2312 = 13,
     
     OTRuleValueTypeDateTextHex = 20,//将日期字符串以十六进制存储，例：日期字符串20220101080000 转化成 data<20220101080000>
     OTRuleValueTypeDateTextDecimal = 21,//将日期字符串以十进制存储，例：日期字符串20221030183032 转化成 data<14160A1D120A20>
     OTRuleValueTypeTimestampHex = 22,//将时间戳以十六进制存储，时间戳先转成日期字符串20220101080000，再转化成 data<20220101080000>
     OTRuleValueTypeTimestampDecimal = 23,//将时间戳以十进制存储，时间戳先转成日期字符串20221030183032，再转化成 data<20220101080000>
     
-    OTRuleValueTypeArray = 100,//所有元素长度不等
-    OTRuleValueTypeArrayFix = 101,//所有元素长度相等
-    OTRuleValueTypeDictionary = 200,//
-    OTRuleValueTypeJson = 1000,
+    OTRuleValueTypeArray = 100,//数组，内部元素长度不等
+    OTRuleValueTypeArrayFix = 101,//数组，内部元素长度相等
+    OTRuleValueTypeDictionary = 200,//字典结构，
+    OTRuleValueTypeJson = 1000,//json结构
 };
 
 extern NSString const *OTRuleKeyItemName;//元素名称
-extern NSString const *OTRuleKeyItemSize;//元素内容大小
+extern NSString const *OTRuleKeyItemSize;//元素内容大小 整型（指定长度） 字符串（指定元素名称）
 extern NSString const *OTRuleKeyItemType;//元素内容类型
-extern NSString const *OTRuleKeyItemSizeFix;//在OTRuleValueTypeArrayFix类型使用,表示元素长度
-extern NSString const *OTRuleKeyItemEndian; //字节序,默认NO（NO-大端，YES-小端）
+extern NSString const *OTRuleKeyItemSizeFix;//在OTRuleValueTypeArrayFix类型使用,表示子元素长度
+extern NSString const *OTRuleKeyItemEndian; //字节序,默认NO（NO-大端，YES-小端）优先级高于外层
 extern NSString const *OTRuleKeyItemSubRules;//OTRuleValueTypeArray、OTRuleValueTypeDictionary数据为列表类型
 //extern NSString const *OTRuleKeyItemBytesFlip;//字节翻转(暂时弃用)
 

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'OTRuleHelper'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = 'Specify a rule container to convert json and data to each other.'
 
 # This description is used to generate tags and improve search results.
@@ -33,11 +33,4 @@ Pod::Spec.new do |s|
 
   s.source_files = 'OTRuleHelper/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'OTRuleHelper' => ['OTRuleHelper/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end

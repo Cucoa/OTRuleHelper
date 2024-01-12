@@ -11,6 +11,7 @@
 #endif
 
 #import "NSData+OTConvert.h"
+#import "NSData+OTDisk.h"
 #import "NSData+OTExt.h"
 #import "NSData+OTSafe.h"
 #import "OTRuleHelper.h"

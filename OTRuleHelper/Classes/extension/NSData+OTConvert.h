@@ -60,7 +60,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param string 目标字符串
  @return data
  */
-+ (NSData *)ot_dataCovertFromStringUTF8:(NSString *)string;
++ (NSData *)ot_dataConvertFromStringUTF8:(NSString *)string;
 
 /**
  UTF8字符串转换成指定长度的NSData（不足补0）
@@ -69,14 +69,14 @@ NS_ASSUME_NONNULL_BEGIN
  @param length 限定字节数
  @return data
  */
-+ (NSData *)ot_dataCovertFromStringUTF8:(NSString *)string length:(NSUInteger)length;
++ (NSData *)ot_dataConvertFromStringUTF8:(NSString *)string length:(NSUInteger)length;
 /**
  将NSData转换成UTF8字符串
 
  @param data 目标字符串
  @return string
  */
-+ (NSString *)ot_stringUTF8CovertFromData:(NSData *)data;
++ (NSString *)ot_stringUTF8ConvertFromData:(NSData *)data;
 
 /**
  将16进制字符串转换成NSData
@@ -84,7 +84,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param hexString 目标字符串
  @return data
  */
-+ (NSData *)ot_dataCovertFromStringHex:(NSString *)hexString;
++ (NSData *)ot_dataConvertFromStringHex:(NSString *)hexString;
 
 /**
  将16进制字符串转换成指定长度的NSData（不足补0）
@@ -93,14 +93,48 @@ NS_ASSUME_NONNULL_BEGIN
  @param length 限定字节数
  @return data
  */
-+ (NSData *)ot_dataCovertFromStringHex:(NSString *)hexString length:(NSUInteger)length;
++ (NSData *)ot_dataConvertFromStringHex:(NSString *)hexString length:(NSUInteger)length;
 /**
  16进制字符串转换成NSData
 
  @param data 二进制数据
  @return string
  */
-+ (NSString *)ot_stringHexCovertFromData:(NSData *)data;
++ (NSString *)ot_stringHexConvertFromData:(NSData *)data;
+
+
+/// UTF8转GB2312
+/// @param data UTF8编码数据
++ (NSData *)ot_dataGB2312ConverFromUTF8Data:(NSData *)data;
+
+/// GB2312转UTF8
+/// @param data GB2312编码数据
++ (NSData *)ot_dataUTF8ConvertFromGB2312Data:(NSData *)data;
+
+/**
+ GB2312字符串转换成NSData
+
+ @param string 目标字符串
+ @return data
+ */
++ (NSData *)ot_dataConvertFromStringGB2312:(NSString *)string;
+
+/**
+ GB2312字符串转换成指定长度的NSData（不足补0）
+
+ @param string 目标字符串
+ @param length 限定字节数
+ @return data
+ */
++ (NSData *)ot_dataConvertFromStringGB2312:(NSString *)string length:(NSUInteger)length;
+/**
+ 将NSData转换成GB2312字符串
+
+ @param data 目标字符串
+ @return string
+ */
++ (NSString *)ot_stringGB2312ConvertFromData:(NSData *)data;
+
 
 + (NSData *)ot_dataConvertFromJson:(id)object;
 + (id)ot_jsonConvertFromData:(NSData *)data;
@@ -118,7 +152,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param a 有符号短整型
  @return 数据对象
  */
-+ (NSData *)ot_dataCovertFromUInt:(UInt64)a;
++ (NSData *)ot_dataConvertFromUInt:(UInt64)a;
 
 /**
  长整型转换限定长度的NSData
@@ -127,7 +161,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param length 限定字节数
  @return 数据对象
  */
-+ (NSData *)ot_dataCovertFromUInt:(UInt64)a length:(NSUInteger)length;
++ (NSData *)ot_dataConvertFromUInt:(UInt64)a length:(NSUInteger)length;
 
 /**
  NSData转换为有符号短整型
@@ -135,7 +169,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param data 数据对象
  @return 有符号整型
  */
-+ (UInt64)ot_uint64CovertFromData:(NSData *)data;
++ (UInt64)ot_uint64ConvertFromData:(NSData *)data;
 
 @end
 
@@ -147,7 +181,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param timeStamp 时间戳
  @return data
  */
-+(NSData *)ot_dataCovertAs7BytesFromTimeStamp:(NSInteger)timeStamp;
++(NSData *)ot_dataConvertAs7BytesFromTimeStamp:(NSInteger)timeStamp;
 
 /**
  将7bytes二进制数据转换成时间戳
@@ -163,7 +197,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param timeStamp 时间戳
  @return data
  */
-+(NSData *)ot_dataCovertAs6BytesFromTimeStamp:(NSInteger)timeStamp;
++(NSData *)ot_dataConvertAs6BytesFromTimeStamp:(NSInteger)timeStamp;
 
 /**
  将6bytes二进制数据转换成时间戳

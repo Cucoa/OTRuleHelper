@@ -68,9 +68,9 @@
         },
         @{
             OTRuleKeyItemName : @"list",
-            OTRuleKeyItemSize : @(3),//元素等长，填写数组个数，
-            OTRuleKeyItemType : @(OTRuleValueTypeArrayFix),
-            OTRuleKeyItemSizeFix : @(10),
+            OTRuleKeyItemSize : @(3),//数组个数，
+            OTRuleKeyItemType : @(OTRuleValueTypeArrayFix),//内部元素体等长，
+            OTRuleKeyItemSizeFix : @(10),//元素体长度
             OTRuleKeyItemSubRules : @[
                 @{
                     OTRuleKeyItemName : @"name",

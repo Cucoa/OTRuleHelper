@@ -41,7 +41,10 @@ static NSDateFormatter *otrule_df;
             size = [size_obj integerValue];
         }else if([size_obj isKindOfClass:[NSString class]]){
             size = [response[size_obj] integerValue];
+        }else if ([size_obj isEqual:[NSNull null]]){
+            size = data.length - offset;
         }
+        
         if (type == OTRuleValueTypeArrayFix) {
             NSInteger size_fix = [element[OTRuleKeyItemSizeFix] integerValue];
             size = size*size_fix;
@@ -165,17 +168,22 @@ static NSDateFormatter *otrule_df;
         case OTRuleValueTypeStringUTF8:
         {
             //字符串
-            value = [NSData ot_stringUTF8CovertFromData:data];
+            value = [NSData ot_stringUTF8ConvertFromData:data];
         }
             break;
         case OTRuleValueTypeStringHex:
         {
-            value = [NSData ot_stringHexCovertFromData:data];
+            value = [NSData ot_stringHexConvertFromData:data];
         }
             break;
         case OTRuleValueTypeStringHexUseEndian:
         {
-            value = [NSData ot_stringHexCovertFromData:isLittle?[data ot_flipBytes]:data];
+            value = [NSData ot_stringHexConvertFromData:isLittle?[data ot_flipBytes]:data];
+        }
+            break;
+        case OTRuleValueTypeStirngGB2312:
+        {
+            value = [NSData ot_stringGB2312ConvertFromData:data];
         }
             break;
         case OTRuleValueTypeDateTextHex:
@@ -375,27 +383,35 @@ static NSDateFormatter *otrule_df;
         case OTRuleValueTypeStringUTF8:
         {
             //字符串
-            data = [NSData ot_dataCovertFromStringUTF8:object];
+            data = [NSData ot_dataConvertFromStringUTF8:object length:size];
         }
             break;
         case OTRuleValueTypeStringHex:
         {
-            data = [NSData ot_dataCovertFromStringHex:object];
+            data = [NSData ot_dataConvertFromStringHex:object];
         }
             break;
         case OTRuleValueTypeStringHexUseEndian:
         {
-            data = [NSData ot_dataCovertFromStringHex:object];
+            data = [NSData ot_dataConvertFromStringHex:object];
             if (isLittle) {
                 data = [data ot_flipBytes];
             }
         }
             break;
+        case OTRuleValueTypeStirngGB2312:
+        {
+            data = [NSData ot_dataConvertFromStringGB2312:object length:size];
+        }
+            break;
         case OTRuleValueTypeDateTextHex:
         case OTRuleValueTypeDateTextDecimal:
         {
-            NSMutableString *hex = [@"" mutableCopy];
             NSString *string = object?object:@"";
+            if (size==6&&string.length==14) {
+                string = [string substringFromIndex:2];
+            }
+            NSMutableString *hex = [@"" mutableCopy];
             for (int i = 0; i < string.length; i+=2) {
                 int vlu = [[string substringWithRange:(NSRange){i,2}] intValue];
                 if (type == OTRuleValueTypeDateTextHex) {
@@ -404,7 +420,7 @@ static NSDateFormatter *otrule_df;
                     [hex appendFormat:@"%02x",vlu];
                 }
             }
-            data = [NSData ot_dataCovertFromStringHex:hex length:size];
+            data = [NSData ot_dataConvertFromStringHex:hex length:size];
         }
             break;
         case OTRuleValueTypeTimestampHex:
@@ -425,7 +441,7 @@ static NSDateFormatter *otrule_df;
                     [hex appendFormat:@"%02x",vlu];
                 }
             }
-            data = [NSData ot_dataCovertFromStringHex:hex length:size];
+            data = [NSData ot_dataConvertFromStringHex:hex length:size];
         }
             break;
         case OTRuleValueTypeArray:
@@ -468,7 +484,7 @@ static NSDateFormatter *otrule_df;
     if (var.length < 1) {
         return [NSString stringWithFormat:@"%@",@(let)];
     }
-    return [NSString stringWithFormat:@"%@+%@",@(let),var];
+    return [NSString stringWithFormat:@"%@%@",@(let),var];
 }
 
 #pragma mark -

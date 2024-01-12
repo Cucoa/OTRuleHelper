@@ -7,149 +7,147 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01EA663173E41C9DD98AE790A10346AC /* NSData+OTConvert.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E439463601C64F7156B5F0D0B59529F /* NSData+OTConvert.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		013062A7DE560AFCFF2511C99949AB8C /* OTRuleHelper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6165E219B855D13589E098E3442D81E4 /* OTRuleHelper-dummy.m */; };
 		040EAF47A7F3EF9CDD69A872FD581708 /* Pods-OTRuleHelper_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F6EC2A01B9441215550CFE0460F6E7E0 /* Pods-OTRuleHelper_Example-dummy.m */; };
 		042538E81CD733956B05CF2FBAD70B7C /* Pods-OTRuleHelper_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F8E1BCBFB2D4AC88AF5BEF272539989 /* Pods-OTRuleHelper_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		08933EC935AD521F14DB106A18728B56 /* OTRuleHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = FA6B8FE193469AEAAB3D61D11CAD0BB2 /* OTRuleHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0CBC850C91BD48D36DE92677CEB0F875 /* Pods-OTRuleHelper_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0194BB80FBA5FEE16CDC51D68301F61D /* Pods-OTRuleHelper_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1F84FE646CD1D7BAFFB58C243277AFF8 /* FBSnapshotTestCase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E5923010B02074CAA9AAF6EA02D66AA /* FBSnapshotTestCase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		22001ADEF5EAE48AF33AC0E03F8D1DD5 /* NSData+OTSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF3525208668F48344FCF15DA76436E /* NSData+OTSafe.m */; };
-		2367C04D07241E6DA2CBA388DDFFD2AE /* NSData+OTExt.h in Headers */ = {isa = PBXBuildFile; fileRef = 79875DA19083D75935A0B7E3C67877A6 /* NSData+OTExt.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21FCAFA860B25C055B14716AB7AD352B /* NSData+OTDisk.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F9C80B9E1AA961D6E57785504E7FF0B /* NSData+OTDisk.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		264D4C96CDD3E48C71C6370C15CD2D6A /* NSData+OTExt.h in Headers */ = {isa = PBXBuildFile; fileRef = 79F678CE2BFC16F96AE8D375395CF65D /* NSData+OTExt.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2975A09730FD83DC0897129A11EA6585 /* SwiftSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0D66CF296ABBC57EC4D0452397E235 /* SwiftSupport.swift */; };
 		2B88C28DD20CBFA7B3AEB21A365197FE /* FBSnapshotTestController.h in Headers */ = {isa = PBXBuildFile; fileRef = AE9FF9459FBCDC4AF88FB6B5A4CC1439 /* FBSnapshotTestController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2CB61F6FA511CAACB43A50DC3A82E0DD /* UIImage+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = D872A3EE224412D4057C234FBC629F9C /* UIImage+Snapshot.m */; };
-		2D2E96A2316E569BB8F2058DB61C4AAA /* NSData+OTExt.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6A02D363AE91DCAE3F14258794786E /* NSData+OTExt.m */; };
 		2ECCAC52EF4C74E1032E0BC646BBE5B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57221B54D014471C3D3E1925EFC917C8 /* Foundation.framework */; };
 		30D475DF57C0C682A723231E7BCA0D14 /* FBSnapshotTestCasePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ABB3EB3CCC5BCA82F40FE8DC87BB778 /* FBSnapshotTestCasePlatform.m */; };
+		3649C6D3A3360FCF576D1267F409AFE1 /* OTRuleHelper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BAF234454294269CAB790D11738D671 /* OTRuleHelper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		373413256658309F9053CE22BF62077E /* UIImage+Snapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = 284833D18C244D2B42966B6EE425AA59 /* UIImage+Snapshot.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		42EC7CD710B819BF6E0963E7EB91C423 /* OTRuleHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = F8355A93DAC6DBE6661650ECE204AC45 /* OTRuleHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		43536BC0EAF3AA0E703CD9980F41587B /* OTRuleHelper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B90EB80C6B33328FAA5010AA7CA401 /* OTRuleHelper-dummy.m */; };
 		4821E9D8FF0625EFE346BC5BF0D262E6 /* Pods-OTRuleHelper_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF11CE696F1F849015C0230AF250E15 /* Pods-OTRuleHelper_Tests-dummy.m */; };
 		5558B876B579BC1E79BD3D2B19148329 /* UIApplication+StrictKeyWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 99A67367E018411D614EC8536A8A1C5B /* UIApplication+StrictKeyWindow.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		5AF5231933309680F8107B8FE4AD4FBF /* NSData+OTConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B9A76238D7054C59446CDD64BA8E89 /* NSData+OTConvert.m */; };
-		5AF6851A438C873F3E4AA6CE61365382 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57221B54D014471C3D3E1925EFC917C8 /* Foundation.framework */; };
 		5BE525FF6FA14B999ED2CCC0AA4FA0CF /* FBSnapshotTestCase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA6E655DC84D06359BD0ED5E36C783 /* FBSnapshotTestCase-dummy.m */; };
 		5ECAA175CE7A673764E8804DCC207249 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57221B54D014471C3D3E1925EFC917C8 /* Foundation.framework */; };
+		62E6D013610C8D6B1411396A7A551DD8 /* NSData+OTExt.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0B3B3CE0C0A13778DE6A9F5684D432 /* NSData+OTExt.m */; };
 		640CCE9C3A28AA3CA15510899F9140EE /* FBSnapshotTestCasePlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 88B1DEEBF6316A84D7413645212492FF /* FBSnapshotTestCasePlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		67F1963AA7C9EDB78127AD5F566A4949 /* UIImage+Diff.h in Headers */ = {isa = PBXBuildFile; fileRef = 96187BF3038121CC146335E9FF0B0AFF /* UIImage+Diff.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		74339C58AC4E5631FB8C0E662668A796 /* UIApplication+StrictKeyWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F538C426803AE34255FC6E35B408CCA /* UIApplication+StrictKeyWindow.m */; };
 		7C67CBD15D9B5D0B7769B2F469478332 /* FBSnapshotTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 277B6BE10C665F515606A22FD60C6DCC /* FBSnapshotTestCase.m */; };
-		7C84BD635D47DAA445A92DDEA40C724E /* NSData+OTSafe.h in Headers */ = {isa = PBXBuildFile; fileRef = BC021FC12A97C1EBE902B64C47417762 /* NSData+OTSafe.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		875A310EAF4D0C136C3FFFF5E0335BE4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA24A38BA9EE106B59E3D4C8DD1CE0E /* UIKit.framework */; };
 		8AE19756F0126FE92AF625E36F3D70FE /* UIImage+Compare.h in Headers */ = {isa = PBXBuildFile; fileRef = 656116C8FA5458F45D4707110C9530EC /* UIImage+Compare.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		8CC0A63F68854B5EFCFFAAC6FD8BF003 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57221B54D014471C3D3E1925EFC917C8 /* Foundation.framework */; };
+		971AD454F83A5B9CE182957F89C5206F /* NSData+OTConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F62065B028E4739AE052548B2289DC4 /* NSData+OTConvert.m */; };
 		9D3C5E2F56838937146191468A893244 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E658F388F01C72599CA75537950B6095 /* XCTest.framework */; };
-		B26ED61D3A7536C86504AA15405A3201 /* OTRuleHelper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 056065C58FA9C57F8FD0976AA2A6C72A /* OTRuleHelper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A4325045FBAD95925A934B01A60176D4 /* NSData+OTDisk.m in Sources */ = {isa = PBXBuildFile; fileRef = E231F62468CFEEBE63B90FED4749318E /* NSData+OTDisk.m */; };
+		AA0508CD3BE57E4E0234823A5F0BC128 /* NSData+OTConvert.h in Headers */ = {isa = PBXBuildFile; fileRef = 611021CF8D2B2599A360CD8C65845C70 /* NSData+OTConvert.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B52281F9F4340D4FC8ABB2FEB1FEC08E /* UIImage+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = 235A78CFFA6D8B8D86CACD733531CB13 /* UIImage+Compare.m */; };
+		B77F5E9D39A3DF391FCE691CCE9632EC /* develop.md in Sources */ = {isa = PBXBuildFile; fileRef = 74C838C33B6C7AD0E04E6F89C31EB2C0 /* develop.md */; };
 		C390C6005353FB986CB52F474CEF8588 /* FBSnapshotTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1B7EA746BF6557FD565BAE12AF9198 /* FBSnapshotTestController.m */; };
 		C9F76407497DF0205D7460B36D22259F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3280BB5E7B57C31D41117A74F76E9DF3 /* QuartzCore.framework */; };
 		CA54C09A12400567AFFCB407EEB7E154 /* UIImage+Diff.m in Sources */ = {isa = PBXBuildFile; fileRef = 4568279DE47DC3AB91598E1317503995 /* UIImage+Diff.m */; };
-		EF5D7515F764D410BCC46B2BD4E6BEB2 /* OTRuleHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB80568C6ED40DCED1AAA91D7E4448 /* OTRuleHelper.m */; };
+		DCE864345407D0C0DDB4911317C4620F /* OTRuleHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FA545C0FEBA838E494BAFC5D3A2825F7 /* OTRuleHelper.m */; };
+		E9393A914CE5B40421B8A76223F5A614 /* NSData+OTSafe.h in Headers */ = {isa = PBXBuildFile; fileRef = C2DDC50235D589BED98ADAEB3D605935 /* NSData+OTSafe.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EBC1559995AD36945F14EA412B7C5B6E /* NSData+OTSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A900E1491A1B0A5402C73089E530E3 /* NSData+OTSafe.m */; };
 		F7C5C97097A6DB8449797EC12523452E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57221B54D014471C3D3E1925EFC917C8 /* Foundation.framework */; };
 		FF8307B7346F4D3BA13C11AECFE6EDD0 /* FBSnapshotTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = FEE661E58CA6655B39AA49AA4C021C33 /* FBSnapshotTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5ABA7796B7B3DAFFFCBD471AF1706549 /* PBXContainerItemProxy */ = {
+		20EBC3120F80D598F7BF8370CD8978D8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 1A9443511E9119B65C5A05120B503CBA;
 			remoteInfo = OTRuleHelper;
 		};
-		6857517C002E9205D010ED67A10B1957 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 98A98149697C80CEF8D5772791E92E66;
-			remoteInfo = FBSnapshotTestCase;
-		};
-		7F2DCFC9EF880B52F05B4BD9A4FE5529 /* PBXContainerItemProxy */ = {
+		4CF11EBE691D20406F1697298D0E7447 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = A32304C0FF6A86FF8FC743C2E783A479;
 			remoteInfo = "Pods-OTRuleHelper_Example";
 		};
+		7056CAC314EB87BEAAD84592FDC0E665 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 98A98149697C80CEF8D5772791E92E66;
+			remoteInfo = FBSnapshotTestCase;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0194BB80FBA5FEE16CDC51D68301F61D /* Pods-OTRuleHelper_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OTRuleHelper_Example-umbrella.h"; sourceTree = "<group>"; };
 		0423C42843B08BE898047361325E3E20 /* Pods-OTRuleHelper_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OTRuleHelper_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		056065C58FA9C57F8FD0976AA2A6C72A /* OTRuleHelper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OTRuleHelper-umbrella.h"; sourceTree = "<group>"; };
-		0AB44970D44FD0A6DC259C29C84DD42D /* OTRuleHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OTRuleHelper.release.xcconfig; sourceTree = "<group>"; };
-		0E439463601C64F7156B5F0D0B59529F /* NSData+OTConvert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSData+OTConvert.h"; sourceTree = "<group>"; };
 		0F538C426803AE34255FC6E35B408CCA /* UIApplication+StrictKeyWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+StrictKeyWindow.m"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.m"; sourceTree = "<group>"; };
+		16FEBC28B74FCD05B36F152A5580C49E /* OTRuleHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OTRuleHelper.release.xcconfig; sourceTree = "<group>"; };
 		1ADA6E655DC84D06359BD0ED5E36C783 /* FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
 		1DA24A38BA9EE106B59E3D4C8DD1CE0E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		1F8E1BCBFB2D4AC88AF5BEF272539989 /* Pods-OTRuleHelper_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OTRuleHelper_Tests-umbrella.h"; sourceTree = "<group>"; };
-		20B90EB80C6B33328FAA5010AA7CA401 /* OTRuleHelper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OTRuleHelper-dummy.m"; sourceTree = "<group>"; };
 		2258A61448940DE2C5B0820A99CAC91C /* Pods-OTRuleHelper_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OTRuleHelper_Example.release.xcconfig"; sourceTree = "<group>"; };
 		235A78CFFA6D8B8D86CACD733531CB13 /* UIImage+Compare.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Compare.m"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.m"; sourceTree = "<group>"; };
 		23F9BCDD684B602AF22481FA50324B98 /* Pods-OTRuleHelper_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OTRuleHelper_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		277B6BE10C665F515606A22FD60C6DCC /* FBSnapshotTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCase.m; path = FBSnapshotTestCase/FBSnapshotTestCase.m; sourceTree = "<group>"; };
 		284833D18C244D2B42966B6EE425AA59 /* UIImage+Snapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Snapshot.h"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.h"; sourceTree = "<group>"; };
+		28DF0F5A9D3C3AFAFEFEB3C9FEFDEAF4 /* OTRuleHelper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OTRuleHelper-prefix.pch"; sourceTree = "<group>"; };
 		292E3FCDA6FDAC876B05423359AE2C3E /* Pods-OTRuleHelper_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OTRuleHelper_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		3280BB5E7B57C31D41117A74F76E9DF3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		3F0D66CF296ABBC57EC4D0452397E235 /* SwiftSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSupport.swift; path = FBSnapshotTestCase/SwiftSupport.swift; sourceTree = "<group>"; };
 		4568279DE47DC3AB91598E1317503995 /* UIImage+Diff.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Diff.m"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.m"; sourceTree = "<group>"; };
 		4934CE9D4E96F5350BF3CC4FB2C3EB49 /* Pods-OTRuleHelper_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OTRuleHelper_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		4BAF234454294269CAB790D11738D671 /* OTRuleHelper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OTRuleHelper-umbrella.h"; sourceTree = "<group>"; };
 		4C6513B09838318BD763CFD5390D1DE0 /* FBSnapshotTestCase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.release.xcconfig; sourceTree = "<group>"; };
-		4CDB80568C6ED40DCED1AAA91D7E4448 /* OTRuleHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OTRuleHelper.m; path = OTRuleHelper/Classes/OTRuleHelper.m; sourceTree = "<group>"; };
 		57221B54D014471C3D3E1925EFC917C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		5AF11CE696F1F849015C0230AF250E15 /* Pods-OTRuleHelper_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OTRuleHelper_Tests-dummy.m"; sourceTree = "<group>"; };
-		5BBD976BC365DABDB1DC48F84FCB3F66 /* OTRuleHelper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OTRuleHelper-prefix.pch"; sourceTree = "<group>"; };
 		5C4F31330DFA99D699E4BDC8C3573D73 /* FBSnapshotTestCase */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FBSnapshotTestCase; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		611021CF8D2B2599A360CD8C65845C70 /* NSData+OTConvert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSData+OTConvert.h"; sourceTree = "<group>"; };
+		6165E219B855D13589E098E3442D81E4 /* OTRuleHelper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OTRuleHelper-dummy.m"; sourceTree = "<group>"; };
 		656116C8FA5458F45D4707110C9530EC /* UIImage+Compare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Compare.h"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.h"; sourceTree = "<group>"; };
 		6603182311ABBFFD9DC5FC0E355DEF55 /* Pods-OTRuleHelper_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OTRuleHelper_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		6ABB3EB3CCC5BCA82F40FE8DC87BB778 /* FBSnapshotTestCasePlatform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCasePlatform.m; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.m; sourceTree = "<group>"; };
-		6DCE4D547A526326F9B67170131B740A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		6D6A40000F3569C3894C24F2A16F85F9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		7401E18A0A8B2919ECE3E9267B62DDB1 /* Pods-OTRuleHelper_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OTRuleHelper_Tests-Info.plist"; sourceTree = "<group>"; };
-		78B9A76238D7054C59446CDD64BA8E89 /* NSData+OTConvert.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSData+OTConvert.m"; sourceTree = "<group>"; };
-		79875DA19083D75935A0B7E3C67877A6 /* NSData+OTExt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSData+OTExt.h"; sourceTree = "<group>"; };
-		7C42B9CA44C3C8F6101C3607EF9D2678 /* OTRuleHelper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = OTRuleHelper.modulemap; sourceTree = "<group>"; };
+		74C838C33B6C7AD0E04E6F89C31EB2C0 /* develop.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = develop.md; path = OTRuleHelper/Classes/develop.md; sourceTree = "<group>"; };
+		79F678CE2BFC16F96AE8D375395CF65D /* NSData+OTExt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSData+OTExt.h"; sourceTree = "<group>"; };
 		7E1B7EA746BF6557FD565BAE12AF9198 /* FBSnapshotTestController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestController.m; path = FBSnapshotTestCase/FBSnapshotTestController.m; sourceTree = "<group>"; };
+		86A900E1491A1B0A5402C73089E530E3 /* NSData+OTSafe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSData+OTSafe.m"; sourceTree = "<group>"; };
 		88B1DEEBF6316A84D7413645212492FF /* FBSnapshotTestCasePlatform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCasePlatform.h; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.h; sourceTree = "<group>"; };
-		8B22C7C4DC749C7D4A05D05EC161828A /* OTRuleHelper-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "OTRuleHelper-Info.plist"; sourceTree = "<group>"; };
+		8D512C3B851EC8D2A5B29C9C9C63843E /* OTRuleHelper-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "OTRuleHelper-Info.plist"; sourceTree = "<group>"; };
 		8E5923010B02074CAA9AAF6EA02D66AA /* FBSnapshotTestCase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-umbrella.h"; sourceTree = "<group>"; };
+		8F62065B028E4739AE052548B2289DC4 /* NSData+OTConvert.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSData+OTConvert.m"; sourceTree = "<group>"; };
+		8F9C80B9E1AA961D6E57785504E7FF0B /* NSData+OTDisk.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSData+OTDisk.h"; sourceTree = "<group>"; };
 		9468E867498BBAF36F9AFFE4845F8B09 /* FBSnapshotTestCase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.debug.xcconfig; sourceTree = "<group>"; };
 		96187BF3038121CC146335E9FF0B0AFF /* UIImage+Diff.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Diff.h"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.h"; sourceTree = "<group>"; };
 		99A67367E018411D614EC8536A8A1C5B /* UIApplication+StrictKeyWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+StrictKeyWindow.h"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.h"; sourceTree = "<group>"; };
-		99CE3456A63248E4203CD6D7235E5539 /* OTRuleHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OTRuleHelper.debug.xcconfig; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A3FF4F22E085B33E3EBA6D1EFDDF79D3 /* Pods-OTRuleHelper_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OTRuleHelper_Example-Info.plist"; sourceTree = "<group>"; };
+		AD0B3B3CE0C0A13778DE6A9F5684D432 /* NSData+OTExt.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSData+OTExt.m"; sourceTree = "<group>"; };
 		AE9FF9459FBCDC4AF88FB6B5A4CC1439 /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestController.h; path = FBSnapshotTestCase/FBSnapshotTestController.h; sourceTree = "<group>"; };
 		B0003F865CD5885713D2A523DFBBF4DC /* Pods-OTRuleHelper_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-OTRuleHelper_Tests"; path = Pods_OTRuleHelper_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5A041B1FC4D46FBF0D4F7F83E9C1DA9 /* Pods-OTRuleHelper_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OTRuleHelper_Tests.modulemap"; sourceTree = "<group>"; };
 		B7103CA00AED20722C5B69CA5B4F6938 /* FBSnapshotTestCase-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FBSnapshotTestCase-Info.plist"; sourceTree = "<group>"; };
-		B8E7BCEA98B7B1669223B27256864C43 /* OTRuleHelper.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = OTRuleHelper.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BC021FC12A97C1EBE902B64C47417762 /* NSData+OTSafe.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSData+OTSafe.h"; sourceTree = "<group>"; };
+		BCF497CA1CAE2499DA8E6A7D7047AF39 /* OTRuleHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OTRuleHelper.debug.xcconfig; sourceTree = "<group>"; };
 		BD02705D2B7C6B2AC917F93AFD18AA8E /* Pods-OTRuleHelper_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OTRuleHelper_Example.modulemap"; sourceTree = "<group>"; };
-		BDF3525208668F48344FCF15DA76436E /* NSData+OTSafe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSData+OTSafe.m"; sourceTree = "<group>"; };
-		C162923936D8A1B239F7F56318049BCE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		C2DDC50235D589BED98ADAEB3D605935 /* NSData+OTSafe.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSData+OTSafe.h"; sourceTree = "<group>"; };
 		C7C2A1003997831E1C3B90C0564EC78B /* Pods-OTRuleHelper_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-OTRuleHelper_Example"; path = Pods_OTRuleHelper_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA18C306F3014FBFDA82CAC4FF90C176 /* Pods-OTRuleHelper_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OTRuleHelper_Example-frameworks.sh"; sourceTree = "<group>"; };
+		CBFC57379EE7A12237F0C4FD2476F288 /* OTRuleHelper.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = OTRuleHelper.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		CBFF6C5FD9C3A84274A9314D3E940B6E /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
+		CCF03891512E4DAB111D6EC02CB88DC6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D08CEBB9BDD9EF7A662ECFC0305C169E /* FBSnapshotTestCase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-prefix.pch"; sourceTree = "<group>"; };
 		D872A3EE224412D4057C234FBC629F9C /* UIImage+Snapshot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Snapshot.m"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.m"; sourceTree = "<group>"; };
 		D979D1E2C7D5285870E0DFF04D4B8219 /* Pods-OTRuleHelper_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OTRuleHelper_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		DC6A02D363AE91DCAE3F14258794786E /* NSData+OTExt.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSData+OTExt.m"; sourceTree = "<group>"; };
 		E078875A4D7632F4D2FD74E721766AFD /* OTRuleHelper */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = OTRuleHelper; path = OTRuleHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E231F62468CFEEBE63B90FED4749318E /* NSData+OTDisk.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSData+OTDisk.m"; sourceTree = "<group>"; };
 		E658F388F01C72599CA75537950B6095 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		EA1FE95639A1C5A4B216FB0BF897FBF7 /* Pods-OTRuleHelper_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OTRuleHelper_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EF723BEBD54A54E927203FBFB7FC64D2 /* OTRuleHelper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = OTRuleHelper.modulemap; sourceTree = "<group>"; };
 		F4664D0667A2A9A7BA7147C13772CB49 /* Pods-OTRuleHelper_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OTRuleHelper_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		F6EC2A01B9441215550CFE0460F6E7E0 /* Pods-OTRuleHelper_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OTRuleHelper_Example-dummy.m"; sourceTree = "<group>"; };
-		F8355A93DAC6DBE6661650ECE204AC45 /* OTRuleHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OTRuleHelper.h; path = OTRuleHelper/Classes/OTRuleHelper.h; sourceTree = "<group>"; };
+		FA545C0FEBA838E494BAFC5D3A2825F7 /* OTRuleHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OTRuleHelper.m; path = OTRuleHelper/Classes/OTRuleHelper.m; sourceTree = "<group>"; };
+		FA6B8FE193469AEAAB3D61D11CAD0BB2 /* OTRuleHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OTRuleHelper.h; path = OTRuleHelper/Classes/OTRuleHelper.h; sourceTree = "<group>"; };
 		FEE661E58CA6655B39AA49AA4C021C33 /* FBSnapshotTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCase.h; path = FBSnapshotTestCase/FBSnapshotTestCase.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8EBDFFE3EEE9E073D8CFBAAB448A991D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5AF6851A438C873F3E4AA6CE61365382 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		A3D6AEE7E7EDE300869AEBA1EF1EF0B3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -169,6 +167,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E3FEEC5659129BD28FC7749DF61D65EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CC0A63F68854B5EFCFFAAC6FD8BF003 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F40E32C70AB11E4BA5085D62874DEDC1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -180,29 +186,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		167C9C8DA1668FAE860083C997D92109 /* OTRuleHelper */ = {
-			isa = PBXGroup;
-			children = (
-				F8355A93DAC6DBE6661650ECE204AC45 /* OTRuleHelper.h */,
-				4CDB80568C6ED40DCED1AAA91D7E4448 /* OTRuleHelper.m */,
-				DB055C1AD2D3E06EF3043EC83F4AEAE2 /* Ext */,
-				34F2328FA262144D36B3FDE2A5E7C3EF /* Pod */,
-				532A5A076A7D5BB3FC2500AC143763C9 /* Support Files */,
-			);
-			name = OTRuleHelper;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		34F2328FA262144D36B3FDE2A5E7C3EF /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				6DCE4D547A526326F9B67170131B740A /* LICENSE */,
-				B8E7BCEA98B7B1669223B27256864C43 /* OTRuleHelper.podspec */,
-				C162923936D8A1B239F7F56318049BCE /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
 		4BA2479549DD918290454B1CDCD0B92B /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,19 +207,14 @@
 			name = Core;
 			sourceTree = "<group>";
 		};
-		532A5A076A7D5BB3FC2500AC143763C9 /* Support Files */ = {
+		4D6597C37B06367EBF50A80919487EFF /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				7C42B9CA44C3C8F6101C3607EF9D2678 /* OTRuleHelper.modulemap */,
-				20B90EB80C6B33328FAA5010AA7CA401 /* OTRuleHelper-dummy.m */,
-				8B22C7C4DC749C7D4A05D05EC161828A /* OTRuleHelper-Info.plist */,
-				5BBD976BC365DABDB1DC48F84FCB3F66 /* OTRuleHelper-prefix.pch */,
-				056065C58FA9C57F8FD0976AA2A6C72A /* OTRuleHelper-umbrella.h */,
-				99CE3456A63248E4203CD6D7235E5539 /* OTRuleHelper.debug.xcconfig */,
-				0AB44970D44FD0A6DC259C29C84DD42D /* OTRuleHelper.release.xcconfig */,
+				6D6A40000F3569C3894C24F2A16F85F9 /* LICENSE */,
+				CBFC57379EE7A12237F0C4FD2476F288 /* OTRuleHelper.podspec */,
+				CCF03891512E4DAB111D6EC02CB88DC6 /* README.md */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/OTRuleHelper";
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		6A3118648BEEA44D79E7C93FA1DFFBD2 /* Pods-OTRuleHelper_Tests */ = {
@@ -256,12 +234,49 @@
 			path = "Target Support Files/Pods-OTRuleHelper_Tests";
 			sourceTree = "<group>";
 		};
+		6ABF31B30E7936450BD0AF80735436B8 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A85747C173273083FBF75C93EF03493F /* OTRuleHelper */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		75084A72CDC3ED6A350A68B162BE4710 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EF723BEBD54A54E927203FBFB7FC64D2 /* OTRuleHelper.modulemap */,
+				6165E219B855D13589E098E3442D81E4 /* OTRuleHelper-dummy.m */,
+				8D512C3B851EC8D2A5B29C9C9C63843E /* OTRuleHelper-Info.plist */,
+				28DF0F5A9D3C3AFAFEFEB3C9FEFDEAF4 /* OTRuleHelper-prefix.pch */,
+				4BAF234454294269CAB790D11738D671 /* OTRuleHelper-umbrella.h */,
+				BCF497CA1CAE2499DA8E6A7D7047AF39 /* OTRuleHelper.debug.xcconfig */,
+				16FEBC28B74FCD05B36F152A5580C49E /* OTRuleHelper.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/OTRuleHelper";
+			sourceTree = "<group>";
+		};
 		906402ECC4C6C5EB58DD365FD2C64E92 /* SwiftSupport */ = {
 			isa = PBXGroup;
 			children = (
 				3F0D66CF296ABBC57EC4D0452397E235 /* SwiftSupport.swift */,
 			);
 			name = SwiftSupport;
+			sourceTree = "<group>";
+		};
+		A85747C173273083FBF75C93EF03493F /* OTRuleHelper */ = {
+			isa = PBXGroup;
+			children = (
+				74C838C33B6C7AD0E04E6F89C31EB2C0 /* develop.md */,
+				BDF31E5FA73655B8D5B57A95B202976A /* extension */,
+				FA6B8FE193469AEAAB3D61D11CAD0BB2 /* OTRuleHelper.h */,
+				FA545C0FEBA838E494BAFC5D3A2825F7 /* OTRuleHelper.m */,
+				4D6597C37B06367EBF50A80919487EFF /* Pod */,
+				75084A72CDC3ED6A350A68B162BE4710 /* Support Files */,
+			);
+			name = OTRuleHelper;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		B69B2ECE2D2C9A3924A9231138CE0BBC /* Support Files */ = {
@@ -294,34 +309,35 @@
 				B69B2ECE2D2C9A3924A9231138CE0BBC /* Support Files */,
 				906402ECC4C6C5EB58DD365FD2C64E92 /* SwiftSupport */,
 			);
-			name = FBSnapshotTestCase;
 			path = FBSnapshotTestCase;
+			sourceTree = "<group>";
+		};
+		BDF31E5FA73655B8D5B57A95B202976A /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				611021CF8D2B2599A360CD8C65845C70 /* NSData+OTConvert.h */,
+				8F62065B028E4739AE052548B2289DC4 /* NSData+OTConvert.m */,
+				8F9C80B9E1AA961D6E57785504E7FF0B /* NSData+OTDisk.h */,
+				E231F62468CFEEBE63B90FED4749318E /* NSData+OTDisk.m */,
+				79F678CE2BFC16F96AE8D375395CF65D /* NSData+OTExt.h */,
+				AD0B3B3CE0C0A13778DE6A9F5684D432 /* NSData+OTExt.m */,
+				C2DDC50235D589BED98ADAEB3D605935 /* NSData+OTSafe.h */,
+				86A900E1491A1B0A5402C73089E530E3 /* NSData+OTSafe.m */,
+			);
+			name = extension;
+			path = OTRuleHelper/Classes/extension;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				F7810F48F9291872510E90639B322D61 /* Development Pods */,
+				6ABF31B30E7936450BD0AF80735436B8 /* Development Pods */,
 				BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */,
 				E81A37DBDE41E671312C56736544E2FA /* Pods */,
 				E7290B6B742AC20ED3A13A899F501064 /* Products */,
 				E7474553DC41662D7EDB4BB8A07E932A /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		DB055C1AD2D3E06EF3043EC83F4AEAE2 /* Ext */ = {
-			isa = PBXGroup;
-			children = (
-				0E439463601C64F7156B5F0D0B59529F /* NSData+OTConvert.h */,
-				78B9A76238D7054C59446CDD64BA8E89 /* NSData+OTConvert.m */,
-				79875DA19083D75935A0B7E3C67877A6 /* NSData+OTExt.h */,
-				DC6A02D363AE91DCAE3F14258794786E /* NSData+OTExt.m */,
-				BC021FC12A97C1EBE902B64C47417762 /* NSData+OTSafe.h */,
-				BDF3525208668F48344FCF15DA76436E /* NSData+OTSafe.m */,
-			);
-			name = Ext;
-			path = OTRuleHelper/Classes/Ext;
 			sourceTree = "<group>";
 		};
 		E7290B6B742AC20ED3A13A899F501064 /* Products */ = {
@@ -369,14 +385,6 @@
 			path = "Target Support Files/Pods-OTRuleHelper_Example";
 			sourceTree = "<group>";
 		};
-		F7810F48F9291872510E90639B322D61 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				167C9C8DA1668FAE860083C997D92109 /* OTRuleHelper */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
 		FB2668559AE577E6E8078C0C291AD417 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -396,6 +404,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				042538E81CD733956B05CF2FBAD70B7C /* Pods-OTRuleHelper_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1FAC907F33BC6D49D48F4DC10017CBB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA0508CD3BE57E4E0234823A5F0BC128 /* NSData+OTConvert.h in Headers */,
+				21FCAFA860B25C055B14716AB7AD352B /* NSData+OTDisk.h in Headers */,
+				264D4C96CDD3E48C71C6370C15CD2D6A /* NSData+OTExt.h in Headers */,
+				E9393A914CE5B40421B8A76223F5A614 /* NSData+OTSafe.h in Headers */,
+				08933EC935AD521F14DB106A18728B56 /* OTRuleHelper.h in Headers */,
+				3649C6D3A3360FCF576D1267F409AFE1 /* OTRuleHelper-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,29 +443,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FC7D607376EB2EDC01F0DF6D7012A510 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				01EA663173E41C9DD98AE790A10346AC /* NSData+OTConvert.h in Headers */,
-				2367C04D07241E6DA2CBA388DDFFD2AE /* NSData+OTExt.h in Headers */,
-				7C84BD635D47DAA445A92DDEA40C724E /* NSData+OTSafe.h in Headers */,
-				42EC7CD710B819BF6E0963E7EB91C423 /* OTRuleHelper.h in Headers */,
-				B26ED61D3A7536C86504AA15405A3201 /* OTRuleHelper-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		1A9443511E9119B65C5A05120B503CBA /* OTRuleHelper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5B589453127CC9FC4F50ADDFCBE94023 /* Build configuration list for PBXNativeTarget "OTRuleHelper" */;
+			buildConfigurationList = 2D86C5A64577311C671F4F211C585A14 /* Build configuration list for PBXNativeTarget "OTRuleHelper" */;
 			buildPhases = (
-				FC7D607376EB2EDC01F0DF6D7012A510 /* Headers */,
-				26DC60E248ABDF9001D8FBE33CD0BD0B /* Sources */,
-				8EBDFFE3EEE9E073D8CFBAAB448A991D /* Frameworks */,
-				71E7DB74C06B777E62DBA285450C24BD /* Resources */,
+				B1FAC907F33BC6D49D48F4DC10017CBB /* Headers */,
+				6CDA18075CA40F3779221FBFB20A08C1 /* Sources */,
+				E3FEEC5659129BD28FC7749DF61D65EA /* Frameworks */,
+				881CEC94618C89A8218A853643F1A33B /* Resources */,
 			);
 			buildRules = (
 			);
@@ -485,7 +494,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				B9AC195A198A39FACC33A7FCE0D58D15 /* PBXTargetDependency */,
+				E20A2E9BFC0EC20BCBB6C0C213D8C2E6 /* PBXTargetDependency */,
 			);
 			name = "Pods-OTRuleHelper_Example";
 			productName = Pods_OTRuleHelper_Example;
@@ -504,8 +513,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				D0D4D5BC31A2F42C63A75D78CC48733E /* PBXTargetDependency */,
-				F08E7057F414F77940CB899A65BC633C /* PBXTargetDependency */,
+				531E8C5C053F0D49B4FE624357E37E2D /* PBXTargetDependency */,
+				B1F7ACBFE5CEAB7BE08DCF2F6B954DC6 /* PBXTargetDependency */,
 			);
 			name = "Pods-OTRuleHelper_Tests";
 			productName = Pods_OTRuleHelper_Tests;
@@ -518,8 +527,8 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -550,7 +559,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		71E7DB74C06B777E62DBA285450C24BD /* Resources */ = {
+		881CEC94618C89A8218A853643F1A33B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -574,15 +583,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		26DC60E248ABDF9001D8FBE33CD0BD0B /* Sources */ = {
+		6CDA18075CA40F3779221FBFB20A08C1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AF5231933309680F8107B8FE4AD4FBF /* NSData+OTConvert.m in Sources */,
-				2D2E96A2316E569BB8F2058DB61C4AAA /* NSData+OTExt.m in Sources */,
-				22001ADEF5EAE48AF33AC0E03F8D1DD5 /* NSData+OTSafe.m in Sources */,
-				EF5D7515F764D410BCC46B2BD4E6BEB2 /* OTRuleHelper.m in Sources */,
-				43536BC0EAF3AA0E703CD9980F41587B /* OTRuleHelper-dummy.m in Sources */,
+				B77F5E9D39A3DF391FCE691CCE9632EC /* develop.md in Sources */,
+				971AD454F83A5B9CE182957F89C5206F /* NSData+OTConvert.m in Sources */,
+				A4325045FBAD95925A934B01A60176D4 /* NSData+OTDisk.m in Sources */,
+				62E6D013610C8D6B1411396A7A551DD8 /* NSData+OTExt.m in Sources */,
+				EBC1559995AD36945F14EA412B7C5B6E /* NSData+OTSafe.m in Sources */,
+				DCE864345407D0C0DDB4911317C4620F /* OTRuleHelper.m in Sources */,
+				013062A7DE560AFCFF2511C99949AB8C /* OTRuleHelper-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,23 +632,23 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B9AC195A198A39FACC33A7FCE0D58D15 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = OTRuleHelper;
-			target = 1A9443511E9119B65C5A05120B503CBA /* OTRuleHelper */;
-			targetProxy = 5ABA7796B7B3DAFFFCBD471AF1706549 /* PBXContainerItemProxy */;
-		};
-		D0D4D5BC31A2F42C63A75D78CC48733E /* PBXTargetDependency */ = {
+		531E8C5C053F0D49B4FE624357E37E2D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FBSnapshotTestCase;
 			target = 98A98149697C80CEF8D5772791E92E66 /* FBSnapshotTestCase */;
-			targetProxy = 6857517C002E9205D010ED67A10B1957 /* PBXContainerItemProxy */;
+			targetProxy = 7056CAC314EB87BEAAD84592FDC0E665 /* PBXContainerItemProxy */;
 		};
-		F08E7057F414F77940CB899A65BC633C /* PBXTargetDependency */ = {
+		B1F7ACBFE5CEAB7BE08DCF2F6B954DC6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-OTRuleHelper_Example";
 			target = A32304C0FF6A86FF8FC743C2E783A479 /* Pods-OTRuleHelper_Example */;
-			targetProxy = 7F2DCFC9EF880B52F05B4BD9A4FE5529 /* PBXContainerItemProxy */;
+			targetProxy = 4CF11EBE691D20406F1697298D0E7447 /* PBXContainerItemProxy */;
+		};
+		E20A2E9BFC0EC20BCBB6C0C213D8C2E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OTRuleHelper;
+			target = 1A9443511E9119B65C5A05120B503CBA /* OTRuleHelper */;
+			targetProxy = 20EBC3120F80D598F7BF8370CD8978D8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -739,6 +750,37 @@
 			};
 			name = Debug;
 		};
+		15F336EF5FF652D46A04186D439CDC28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16FEBC28B74FCD05B36F152A5580C49E /* OTRuleHelper.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/OTRuleHelper/OTRuleHelper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/OTRuleHelper/OTRuleHelper-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/OTRuleHelper/OTRuleHelper.modulemap";
+				PRODUCT_MODULE_NAME = OTRuleHelper;
+				PRODUCT_NAME = OTRuleHelper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		5A836CC1F526C90BC7A910899C70723D /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2258A61448940DE2C5B0820A99CAC91C /* Pods-OTRuleHelper_Example.release.xcconfig */;
@@ -828,12 +870,41 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
+		};
+		80D7F203CBEBD32F6E428D5B239F7130 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCF497CA1CAE2499DA8E6A7D7047AF39 /* OTRuleHelper.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/OTRuleHelper/OTRuleHelper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/OTRuleHelper/OTRuleHelper-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/OTRuleHelper/OTRuleHelper.modulemap";
+				PRODUCT_MODULE_NAME = OTRuleHelper;
+				PRODUCT_NAME = OTRuleHelper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		842C60C4F1EBC85F9C8FF97D39D120FF /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -864,67 +935,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		9C6599B8927F83C707EC9BE0CC68EE57 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 99CE3456A63248E4203CD6D7235E5539 /* OTRuleHelper.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/OTRuleHelper/OTRuleHelper-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/OTRuleHelper/OTRuleHelper-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/OTRuleHelper/OTRuleHelper.modulemap";
-				PRODUCT_MODULE_NAME = OTRuleHelper;
-				PRODUCT_NAME = OTRuleHelper;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		A9CA4358E29EF875142B2C1A3F3A48E6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0AB44970D44FD0A6DC259C29C84DD42D /* OTRuleHelper.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/OTRuleHelper/OTRuleHelper-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/OTRuleHelper/OTRuleHelper-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/OTRuleHelper/OTRuleHelper.modulemap";
-				PRODUCT_MODULE_NAME = OTRuleHelper;
-				PRODUCT_NAME = OTRuleHelper;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		CA1BA1856058828A99F61FD0EA4D6CDF /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1038,20 +1048,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		2D86C5A64577311C671F4F211C585A14 /* Build configuration list for PBXNativeTarget "OTRuleHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80D7F203CBEBD32F6E428D5B239F7130 /* Debug */,
+				15F336EF5FF652D46A04186D439CDC28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D299434AB35E7FD6F7921C8EF24742FF /* Debug */,
 				7EE7A78859F657F6BEFC651185B43192 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5B589453127CC9FC4F50ADDFCBE94023 /* Build configuration list for PBXNativeTarget "OTRuleHelper" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9C6599B8927F83C707EC9BE0CC68EE57 /* Debug */,
-				A9CA4358E29EF875142B2C1A3F3A48E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
